@@ -32,7 +32,7 @@ namespace Cirrious.MvvmCross.Localization
             _rootFolderForResources = rootFolderForResources;
 
             TextProvider = new MvxJsonDictionaryTextProvider(true);
-            LoadResources(string.Empty);
+            //LoadResources(string.Empty);
         }
 
         protected abstract IDictionary<string, string> ResourceFiles { get; }
