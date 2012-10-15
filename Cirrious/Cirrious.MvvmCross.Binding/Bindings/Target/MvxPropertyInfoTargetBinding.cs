@@ -10,8 +10,11 @@
 #endregion
 
 using System;
+using System.Linq;
 using System.Reflection;
+using Cirrious.MvvmCross.Binding.Attributes;
 using Cirrious.MvvmCross.Binding.Interfaces;
+using Cirrious.MvvmCross.Exceptions;
 using Cirrious.MvvmCross.Interfaces.Platform.Diagnostics;
 
 namespace Cirrious.MvvmCross.Binding.Bindings.Target
@@ -27,6 +30,22 @@ namespace Cirrious.MvvmCross.Binding.Bindings.Target
         {
             _target = target;
             _targetPropertyInfo = targetPropertyInfo;
+        }
+
+        protected override void Dispose(bool isDisposing)
+        {
+            if (isDisposing)
+            {
+                // if the target property should be set to NULL on dispose then we clear it here
+                // this is a fix for the possible memory leaks discussion started https://github.com/slodge/MvvmCross/issues/17#issuecomment-8527392
+                var setToNullAttribute = Attribute.GetCustomAttribute(_targetPropertyInfo, typeof(MvxSetToNullAfterBindingAttribute), true);
+                if (setToNullAttribute != null)
+                {
+                    SetValue(null);
+                }
+            }
+
+            base.Dispose(isDisposing);
         }
 
         protected object Target { get { return _target; } }
@@ -135,6 +154,5 @@ namespace Cirrious.MvvmCross.Binding.Bindings.Target
             get { return base.Target as T; }
         }        
     }
-
 
 }

@@ -74,6 +74,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <Compile Include="Attributes\MvxSetToNullAfterBindingAttribute.cs" />
     <Compile Include="Binders\Json\MvxJsonBindingDescription.cs" />
     <Compile Include="Binders\Json\MvxJsonBindingDescriptionParser.cs" />
     <Compile Include="Binders\Json\MvxJsonBindingParser.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Touch\MvxTouchBindingSetup.cs" />
     <Compile Include="Touch\Interfaces\Views\IMvxBindableView.cs" />
     <Compile Include="Touch\Interfaces\IMvxBindingTouchView.cs" />
+    <Compile Include="Touch\Target\MvxUISwitchOnTargetBinding.cs" />
     <Compile Include="Touch\Views\MvxBaseBindableTableViewSource.cs" />
     <Compile Include="Touch\Views\MvxBindableTableViewCell.cs" />
     <Compile Include="Touch\Views\MvxBindableTableViewDelegate.cs" />
@@ -133,6 +135,7 @@
     <Compile Include="Touch\Target\MvxUIEditFieldTextTargetBinding.cs" />
     <Compile Include="Touch\Target\MvxUISliderValueTargetBinding.cs" />
     <Compile Include="Touch\Target\MvxUIButtonTitleTargetBinding.cs" />
+    <Compile Include="Touch\Views\MvxTouchImageView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cirrious.MvvmCross\Cirrious.MvvmCross.Touch.csproj">
