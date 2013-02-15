@@ -8,7 +8,7 @@ using MonoTouch.UIKit;
 
 namespace Cirrious.MvvmCross.Binding
 {
-	public class MvxBindablePickerViewDataSource : MvxBaseBindablePickerViewDataSource
+	public class MvxBindablePickerViewDataSource<ObjType> : MvxBaseBindablePickerViewDataSource
 	{
 		private IList _itemsSource;
 		
@@ -61,6 +61,28 @@ namespace Cirrious.MvvmCross.Binding
 		public override int GetComponentCount (UIPickerView pickerView)
 		{
 			return 1;
+		}
+
+		private ObjType _selectedObject;
+		public ObjType SelectedObject {
+			set {
+				_selectedObject = value;
+			}
+			get {
+				if (_selectedObject != null)
+					return _selectedObject;
+				
+				if (ItemsSource.Count > 0)
+					return (ObjType)ItemsSource [0];
+				
+				return _selectedObject;
+			}
+		}
+
+		public override void Selected (UIPickerView picker, int row, int component)
+		{
+			SelectedObject = (ObjType)ItemsSource[row];
+			//Console.WriteLine("Selected object: " + SelectedObject);
 		}
 	}
 }
