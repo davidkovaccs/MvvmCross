@@ -9,10 +9,9 @@
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>Newtonsoft.Json.MonoTouch</RootNamespace>
-    <MtouchSdkVersion>3.2</MtouchSdkVersion>
     <AssemblyName>Newtonsoft_Json_MonoTouch</AssemblyName>
-    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
+    <ReleaseVersion>1.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,6 +24,8 @@
     <MtouchDebug>true</MtouchDebug>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <MtouchSdkVersion>3.2</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,6 +39,8 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <NoStdLib>true</NoStdLib>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <MtouchSdkVersion>3.2</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -48,12 +51,16 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <DefineConstants>MONOTOUCH;NET35;SILVERLIGHT</DefineConstants>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <MtouchSdkVersion>3.2</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <WarningLevel>4</WarningLevel>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <MtouchSdkVersion>3.2</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AdHoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -64,11 +71,50 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <MtouchSdkVersion>3.2</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AdHoc|iPhoneSimulator' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\AdHoc</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <MtouchSdkVersion>3.2</MtouchSdkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Staging_Debug|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Staging_Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>STAGING;DEBUG;MONOTOUCH;NET35;SILVERLIGHT</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Staging_Release|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Staging_Release</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>STAGING;MONOTOUCH;NET35;SILVERLIGHT</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production_Debug|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Production_Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>PRODUCTION;DEBUG;MONOTOUCH;NET35;SILVERLIGHT</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production_Release|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Production_Release</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>PRODUCTION;MONOTOUCH;NET35;SILVERLIGHT</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
@@ -78,6 +124,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="mscorlib" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bson\BsonBinaryType.cs" />

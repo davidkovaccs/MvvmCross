@@ -14,29 +14,58 @@
     <FileAlignment>512</FileAlignment>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidSupportedAbis>armeabi</AndroidSupportedAbis>
-    <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
+    <ReleaseVersion>1.0</ReleaseVersion>
     <TargetFrameworkVersion>v1.6</TargetFrameworkVersion>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;MonoDroid</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
-  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\..\bin\Release\</OutputPath>
     <DefineConstants>DEBUG;TRACE;MonoDroid</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidStoreUncompressedFileExtensions />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Staging_Debug|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Staging_Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <DefineConstants>STAGING;TRACE;DEBUG;MonoDroid</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Staging_Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Staging_Release</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <DefineConstants>STAGING;DEBUG;TRACE;MonoDroid</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production_Debug|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Production_Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <DefineConstants>PRODUCTION;TRACE;DEBUG;MonoDroid</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production_Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Production_Release</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <DefineConstants>PRODUCTION;DEBUG;TRACE;MonoDroid</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>TRACE;DEBUG;MonoDroid</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -45,6 +74,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Mono.Android.Support.v4" />
+    <Reference Include="Mono.SlidingMenu">
+      <HintPath>..\..\..\Libraries\Mono.SlidingMenu\bin\Release\Mono.SlidingMenu.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Android\Interfaces\IMvxAndroidCurrentTopActivity.cs" />
@@ -357,6 +390,7 @@
     <Compile Include="Views\MvxViewsContainer.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Android\Views\MvxSlidingActivityView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Android\Platform\SoundEffects\" />

@@ -2,27 +2,15 @@
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{F073E4F8-E0B6-43E7-84C1-B71AE4BEA0E0}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>Cirrious.MvvmCross.Dialog.Touch</RootNamespace>
-    <AssemblyName>Cirrious.MvvmCross.Dialog.Touch</AssemblyName>
-    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <NoStdLib>true</NoStdLib>
+    <ReleaseVersion>1.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -31,6 +19,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <AssemblyName>Cirrious.MvvmCross.Dialog.Touch</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,6 +34,8 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchProfiling>true</MtouchProfiling>
     <MtouchLink>None</MtouchLink>
+    <AssemblyName>Cirrious.MvvmCross.Dialog.Touch</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -53,6 +45,8 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
+    <AssemblyName>Cirrious.MvvmCross.Dialog.Touch</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AdHoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -61,6 +55,8 @@
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
     <DefineConstants>MONOTOUCH</DefineConstants>
+    <AssemblyName>Cirrious.MvvmCross.Dialog.Touch</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|iPhone'">
     <OutputPath>..\..\bin\iPhone\Debug\</OutputPath>
@@ -68,24 +64,70 @@
     <WarningLevel>4</WarningLevel>
     <Optimize>false</Optimize>
     <NoStdLib>true</NoStdLib>
+    <AssemblyName>Cirrious.MvvmCross.Dialog.Touch</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|iPhone'">
     <OutputPath>..\..\bin\iPhone\Release\</OutputPath>
     <DebugType>none</DebugType>
     <WarningLevel>4</WarningLevel>
     <Optimize>false</Optimize>
+    <AssemblyName>Cirrious.MvvmCross.Dialog.Touch</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AdHoc|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\bin\AdHoc</OutputPath>
     <WarningLevel>4</WarningLevel>
+    <AssemblyName>Cirrious.MvvmCross.Dialog.Touch</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AdHoc|iPhoneSimulator' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\bin\AdHoc</OutputPath>
     <WarningLevel>4</WarningLevel>
+    <AssemblyName>Cirrious.MvvmCross.Dialog.Touch</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Staging_Debug|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Staging_Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>CirriousMvvmCrossDialogTouch</AssemblyName>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>STAGING</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Staging_Release|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Staging_Release</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>CirriousMvvmCrossDialogTouch</AssemblyName>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>STAGING</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production_Debug|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Production_Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>CirriousMvvmCrossDialogTouch</AssemblyName>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>PRODUCTION</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production_Release|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Production_Release</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>CirriousMvvmCrossDialogTouch</AssemblyName>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>PRODUCTION</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>CirriousMvvmCrossDialogTouch</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="monotouch">
