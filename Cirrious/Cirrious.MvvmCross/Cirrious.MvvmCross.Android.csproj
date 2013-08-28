@@ -76,7 +76,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="Mono.Android.Support.v4" />
     <Reference Include="Mono.SlidingMenu">
-      <HintPath>..\..\..\Libraries\Mono.SlidingMenu\bin\Release\Mono.SlidingMenu.dll</HintPath>
+      <HintPath>..\..\..\EMMA\EMMA.UI.Droid\Mono.SlidingMenu.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
