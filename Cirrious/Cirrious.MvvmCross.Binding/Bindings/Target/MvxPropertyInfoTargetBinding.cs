@@ -71,7 +71,9 @@ namespace Cirrious.MvvmCross.Binding.Bindings.Target
             {
                 _updatingState = UpdatingState.UpdatingTarget;
                 var safeValue = _targetPropertyInfo.PropertyType.MakeSafeValue(value);
-                _targetPropertyInfo.SetValue(_target, safeValue, null);
+				//HACK: this if statement isn't here originally...
+				if(safeValue != null)
+                	_targetPropertyInfo.SetValue(_target, safeValue, null);
             }
             finally 
             {
